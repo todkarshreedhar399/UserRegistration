@@ -1,12 +1,9 @@
-
-
-
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PasswordValidate2Regex{
-   public static void main(String[] args) {
+public class PasswordValidate3Regex{
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter first name");
         String firstName = scan.nextLine();
@@ -28,7 +25,7 @@ public class PasswordValidate2Regex{
     }
 
     private static void validatePassword(String password) {
-        String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z]).{8,20}$";
+        String passwordRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,20}$";
         Pattern pattern = Pattern.compile(passwordRegex);
         Matcher matcher = pattern.matcher(password);
         System.out.println("is valid password: " +matcher.matches());
